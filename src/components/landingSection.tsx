@@ -13,8 +13,8 @@ const useStyles = createUseStyles({
     height: '100vh',
   },
   header: {
-    width: 250,
-    margin: '0 75px',
+    width: 325,
+    marginRight: '75px',
     display: 'flex',
     flexDirection: 'column',
     '&>*': {
