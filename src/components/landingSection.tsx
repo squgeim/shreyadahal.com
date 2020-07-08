@@ -10,6 +10,7 @@ const useStyles = createUseStyles({
   root: {
     display: 'flex',
     flexDirection: 'row',
+    marginBottom: 150,
     height: '100vh',
   },
   header: {
