@@ -3,6 +3,8 @@
 body {
     background: #270F25;
     font-family: Lato, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 

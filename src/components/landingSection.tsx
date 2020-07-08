@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {createUseStyles} from "react-jss";
 
+import mainPicture from '../images/shreyadahal.jpg';
+
 import * as colors from "../constants/colorScheme.json";
 import * as fontFamilies from "../constants/fontFamily.json";
 
@@ -11,10 +13,13 @@ const useStyles = createUseStyles({
     height: '100vh',
   },
   header: {
-    width: 200,
+    width: 250,
     margin: '0 75px',
     display: 'flex',
     flexDirection: 'column',
+    '&>*': {
+      marginBottom: 25,
+    },
     '& h1': {
       fontFamily: fontFamilies.header,
       color: colors.white,
@@ -28,14 +33,19 @@ const useStyles = createUseStyles({
       fontSize: 24,
       fontFamily: fontFamilies.monospace,
       textAlign: 'right',
+      marginBottom: 50,
     }
   },
   main: {
     display: 'flex',
+    flex: 1,
     flexDirection: 'column',
   },
   mainpicture: {
     flex: 1,
+    backgroundImage: `url(${mainPicture})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'top center',
   },
   heroText: {
     fontFamily: fontFamilies.title,
@@ -50,8 +60,11 @@ const useStyles = createUseStyles({
   subtitle: {
     backgroundColor: colors.white,
     padding: '65px',
-    fontSize: '24px',
-    lineHeight: '29px',
+    '& p': {
+      fontSize: '24px',
+      lineHeight: '29px',
+      width: '65%',
+    }
   }
 });
 
@@ -69,10 +82,12 @@ function LandingSection() {
         <p className={classes.heroText}>
           a full-stack software engineer<br/> and open-source software enthusiast.
         </p>
-        <p className={classes.subtitle}>
-          I develop highly-scalable web applications and browser extensions trusted
-          by thousands of users and have led teams to deliver world-class software service.
-        </p>
+        <div className={classes.subtitle}>
+          <p>
+            I develop highly-scalable web applications and browser extensions trusted
+            by thousands of users and have led teams to deliver world-class software service.
+          </p>
+        </div>
       </div>
     </section>
   );
