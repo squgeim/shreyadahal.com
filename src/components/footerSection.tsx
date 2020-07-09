@@ -30,13 +30,17 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     textTransform: 'uppercase',
     '& li': {
-      display: 'flex',
-      alignItems: 'center',
       marginRight: '100px',
       '& svg': {
         width: 16,
         height: 16,
         marginRight: 5,
+      },
+      '& a': {
+        display: 'flex',
+        alignItems: 'center',
+        textDecoration: 'none',
+        color: 'inherit',
       }
     },
     '& li:last-of-type': {
@@ -57,10 +61,10 @@ function FooterSection() {
     <section className={classes.root}>
       <ul className={classes.links}>
         <li><RiUserLocationLine/> canada</li>
-        <li><RiMailOpenLine/> shreyadahal@gmail.com</li>
-        <li><RiGithubLine/> github</li>
-        <li><RiLinkedinBoxLine/> linkedin</li>
-        <li><RiStackOverflowLine/> stack overflow</li>
+        <li><a href="mailto:shreyadahal@gmail.com"><RiMailOpenLine/> shreyadahal@gmail.com</a></li>
+        <li><a href="https://github.com/squgeim"><RiGithubLine/> github</a></li>
+        <li><a href="https://www.linkedin.com/in/squgeim/"><RiLinkedinBoxLine/> linkedin</a></li>
+        <li><a href="https://stackoverflow.com/users/1654226/squgeim?tab=profile"><RiStackOverflowLine/> stack overflow</a></li>
       </ul>
       <span className={classes.copy}>
         &copy; Shreya Dahal, MMXX. All rights reserved.
