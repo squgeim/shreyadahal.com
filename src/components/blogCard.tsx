@@ -4,10 +4,17 @@ import { createUseStyles } from "react-jss"
 import * as colors from "../constants/colorScheme.json";
 import * as fonts from "../constants/fontFamily.json";
 
+import PublishedDate from "./publishedDate";
+
 const useStyles = createUseStyles({
   root: {
+    display: 'flex',
+    flexDirection: 'row',
     marginLeft: '400px',
-    marginBottom: '100px',
+  },
+  card: {
+    flex: 1,
+    position: 'relative',
     background: colors.white,
     '& a': {
       padding: '65px',
@@ -46,13 +53,15 @@ function BlogCard(props: IBlogCardProps) {
 
   return (
     <section className={classes.root}>
-      <a href={blog.url}>
-        <h1>{blog.title}</h1>
-        <p>{blog.blurb}</p>
-        <div>{blog.publishedDate}</div>
-      </a>
+      <PublishedDate publisedDate={blog.publishedDate} />
+      <div className={classes.card}>
+        <a href={blog.url}>
+          <h1>{blog.title}</h1>
+          <p>{blog.blurb}</p>
+        </a>
+      </div>
     </section>
-  )
+  );
 }
 
 export default BlogCard;
