@@ -11,11 +11,18 @@ const useStyles = createUseStyles({
     display: 'flex',
     flexDirection: 'row',
     marginLeft: '400px',
+    transition: '100ms',
+    '&:hover': {
+      translate: '-20px -20px',
+    },
   },
   card: {
     flex: 1,
     position: 'relative',
     background: colors.white,
+    '&:hover': {
+      boxShadow: `rgba(206, 143, 143, 0.5) 10px 10px`,
+    },
     '& a': {
       padding: '65px',
       textDecoration: 'none',

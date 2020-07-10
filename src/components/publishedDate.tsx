@@ -10,10 +10,11 @@ const useStyles = createUseStyles({
     color: colors.white,
     textAlign: 'right',
     fontFamily: fonts.monospace,
+    pointerEvents: 'none',
   },
   date: {
     position: 'absolute',
-    bottom: '42px',
+    bottom: '-21px',
     right: '20px',
     fontSize: 144,
     fontWeight: 'bold',
@@ -22,7 +23,7 @@ const useStyles = createUseStyles({
   },
   month: {
     right: 0,
-    bottom: '73px',
+    bottom: '0px',
     position: 'absolute',
     display: 'inline-block',
   },
