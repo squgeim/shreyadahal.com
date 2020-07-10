@@ -13,7 +13,7 @@ const useStyles = createUseStyles({
     marginLeft: '400px',
     transition: '100ms',
     '&:hover': {
-      translate: '-20px -20px',
+      transform: 'translate(-20px, -20px)',
     },
   },
   card: {
