@@ -21,6 +21,7 @@ const useStyles = createUseStyles({
     position: 'relative',
     background: colors.white,
     '&:hover': {
+      background: 'white',
       boxShadow: `rgba(206, 143, 143, 0.5) 10px 10px`,
     },
     '& a': {

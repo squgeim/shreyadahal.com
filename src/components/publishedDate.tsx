@@ -14,12 +14,12 @@ const useStyles = createUseStyles({
   },
   date: {
     position: 'absolute',
-    bottom: '-21px',
-    right: '20px',
-    fontSize: 144,
+    bottom: '0px',
+    right: '50px',
+    fontSize: 215,
     fontWeight: 'bold',
     letterSpacing: '-0.3em',
-    color: 'rgba(255,255,255,0.5)',
+    color: '#C9C4C9',
   },
   month: {
     right: 0,
