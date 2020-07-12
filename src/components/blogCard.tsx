@@ -1,5 +1,5 @@
-import * as React from "react"
-import { createUseStyles } from "react-jss"
+import * as React from "react";
+import { createUseStyles } from "react-jss";
 
 import * as colors from "../constants/colorScheme.json";
 import * as fonts from "../constants/fontFamily.json";
@@ -8,41 +8,41 @@ import PublishedDate from "./publishedDate";
 
 const useStyles = createUseStyles({
   root: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginLeft: '400px',
-    transition: '100ms',
-    '&:hover': {
-      transform: 'translate(-20px, -20px)',
+    display: "flex",
+    flexDirection: "row",
+    marginLeft: "400px",
+    transition: "100ms",
+    "&:hover": {
+      transform: "translate(-20px, -20px)",
     },
   },
   card: {
     flex: 1,
-    position: 'relative',
+    position: "relative",
     background: colors.white,
-    '&:hover': {
-      background: 'white',
+    "&:hover": {
+      background: "white",
       boxShadow: `rgba(206, 143, 143, 0.5) 10px 10px`,
     },
-    '& a': {
-      padding: '65px',
-      textDecoration: 'none',
-      color: 'inherit',
-      display: 'block',
+    "& a": {
+      padding: "65px",
+      textDecoration: "none",
+      color: "inherit",
+      display: "block",
     },
-    '& h1': {
+    "& h1": {
       fontFamily: fonts.header,
-      fontSize: '36px',
-      lineHeight: '24px',
+      fontSize: "36px",
+      lineHeight: "24px",
       color: colors.background,
-      marginBottom: '54px',
+      marginBottom: "54px",
     },
-    '& p': {
-      fontSize: '18px',
-      lineHeight: '22px',
-      width: '700px',
-    }
-  }
+    "& p": {
+      fontSize: "18px",
+      lineHeight: "22px",
+      width: "700px",
+    },
+  },
 });
 
 interface IBlogCardProps {
@@ -51,7 +51,7 @@ interface IBlogCardProps {
     publishedDate: string;
     url: string;
     blurb: string;
-    type: string
+    type: string;
   };
 }
 

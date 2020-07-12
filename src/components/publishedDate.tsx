@@ -1,31 +1,31 @@
-import * as React from 'react';
-import { createUseStyles } from "react-jss"
+import * as React from "react";
+import { createUseStyles } from "react-jss";
 
 import * as colors from "../constants/colorScheme.json";
 import * as fonts from "../constants/fontFamily.json";
 
 const useStyles = createUseStyles({
   root: {
-    position: 'relative',
+    position: "relative",
     color: colors.white,
-    textAlign: 'right',
+    textAlign: "right",
     fontFamily: fonts.monospace,
-    pointerEvents: 'none',
+    pointerEvents: "none",
   },
   date: {
-    position: 'absolute',
-    bottom: '0px',
-    right: '50px',
+    position: "absolute",
+    bottom: "0px",
+    right: "50px",
     fontSize: 215,
-    fontWeight: 'bold',
-    letterSpacing: '-0.3em',
-    color: '#C9C4C9',
+    fontWeight: "bold",
+    letterSpacing: "-0.3em",
+    color: "#C9C4C9",
   },
   month: {
     right: 0,
-    bottom: '0px',
-    position: 'absolute',
-    display: 'inline-block',
+    bottom: "0px",
+    position: "absolute",
+    display: "inline-block",
   },
 });
 
@@ -43,7 +43,8 @@ function PublishedDate(props: IPublishedDateProps) {
     <div className={classes.root}>
       <span className={classes.date}>{date.getDate()}</span>
       <span className={classes.month}>
-        {getMonthString(date.getMonth())}<br />
+        {getMonthString(date.getMonth())}
+        <br />
         {date.getFullYear()}
       </span>
     </div>
@@ -53,22 +54,22 @@ function PublishedDate(props: IPublishedDateProps) {
 function getMonthString(month: number) {
   try {
     return [
-      'jan',
-      'feb',
-      'mar',
-      'apr',
-      'may',
-      'jun',
-      'jul',
-      'aug',
-      'sep',
-      'oct',
-      'nov',
-      'dec',
+      "jan",
+      "feb",
+      "mar",
+      "apr",
+      "may",
+      "jun",
+      "jul",
+      "aug",
+      "sep",
+      "oct",
+      "nov",
+      "dec",
     ][month];
   } catch (err) {
     if (err instanceof RangeError) {
-      return '';
+      return "";
     }
   }
 }

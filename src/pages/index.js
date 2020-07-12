@@ -1,12 +1,12 @@
 import React from "react";
-import SEO from "../components/seo"
+import SEO from "../components/seo";
 
-import 'reset-css/reset.css';
-import '../styles/style.css';
+import "reset-css/reset.css";
+import "../styles/style.css";
 
-import LandingSection from "../components/landingSection"
-import BlogSection from "../components/blogSection"
-import FooterSection from "../components/footerSection"
+import LandingSection from "../components/landingSection";
+import BlogSection from "../components/blogSection";
+import FooterSection from "../components/footerSection";
 
 const IndexPage = () => {
   return (
@@ -16,7 +16,7 @@ const IndexPage = () => {
       <BlogSection />
       <FooterSection />
     </>
-  )
+  );
 };
 
 export default IndexPage;
