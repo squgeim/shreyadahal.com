@@ -14,7 +14,7 @@ function useBlogs() {
       .catch(err => {
         console.error(err);
       });
-  });
+  }, []);
 
   return blogs;
 }
